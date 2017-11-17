@@ -60,6 +60,7 @@ def main():
     Main routine.
     Reads standard input line by line.
     """
+    print('Tailing logfile...')
     while True:
         line = sys.stdin.readline()
         handle_line(line)
