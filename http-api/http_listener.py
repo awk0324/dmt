@@ -27,8 +27,8 @@ def callanswered():
     """
     print('Call answered')
 
-    Popen(['amixer', '-c', cardno, 'cset', mic_play, '0'])
-    Popen(['amixer', '-c', cardno, 'cset', mic_cap, '100'])
+    Popen(['amixer', '-c', cardno, 'cset', mic_play, '100'])
+    Popen(['amixer', '-c', cardno, 'cset', mic_cap, '0'])
 
     return 'Call answered\n'
 
@@ -40,8 +40,8 @@ def callended():
     """
     print('Call ended')
 
-    Popen(['amixer', '-c', cardno, 'cset', mic_play, '100'])
-    Popen(['amixer', '-c', cardno, 'cset', mic_cap, '0'])
+    Popen(['amixer', '-c', cardno, 'cset', mic_play, '0'])
+    Popen(['amixer', '-c', cardno, 'cset', mic_cap, '100'])
 
     return 'Call ended\n'
 
