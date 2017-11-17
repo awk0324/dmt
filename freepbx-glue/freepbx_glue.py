@@ -21,19 +21,20 @@ def handle_line(logline):
     parsed = logline.split()
 
     # We wait for a ring.
-    if parsed[4].split('-')[0] == RECEIVER_ID:
-        # stackno = parsed[4].split('-')[1]
-        if parsed[6] == 'ringing':
-            globalvars.weareringing = True
-            print('We are ringing')
-            return
+    if not globalvars.weareringing and not globalvars.wehaveanswered:
+        if parsed[4].split('-')[0] == RECEIVER_ID:
+            # stackno = parsed[4].split('-')[1]
+            if parsed[6] == 'ringing':
+                globalvars.weareringing = True
+                print('We are ringing')
+                return
 
     # When a call is answered, the receiver stackno is +1 in hex than
     # the caller's.
 
     # The phone is ringing.
     if globalvars.weareringing:
-        if parsed[3] == 'app_dial:' and parsed[5] == 'answered':
+        if parsed[3] == 'app_dial.c:' and parsed[5] == 'answered':
             globalvars.weareringing = False
             globalvars.wehaveanswered = True
             print('We have answered')
