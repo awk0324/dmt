@@ -19,6 +19,8 @@ def handle_line(logline):
         return
 
     parsed = logline.split()
+    if len(parsed) < 7:
+        return
 
     # We wait for a ring.
     if not globalvars.weareringing and not globalvars.wehaveanswered:
