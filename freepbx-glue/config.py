@@ -4,10 +4,10 @@ Configuration file for the FreePBX log parser
 """
 
 # SIP ID of the caller station
-CALLER_ID = 'SIP/4005'
+CALLER_ID = 'SIP/321'
 
 # SIP ID of the telephone
-RECEIVER_ID = 'SIP/4004'
+RECEIVER_ID = 'SIP/123'
 
 # API url of the caller station listener
-STATION_API = 'http://10.20.30.31:8000'
+STATION_API = 'http://laptop:8000'
