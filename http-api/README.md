@@ -16,7 +16,7 @@ Dependencies
 ------------
 
 ```
-python3-flask
+python3-flask python3-mido python3-rtmidi
 ```
 
 

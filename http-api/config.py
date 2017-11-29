@@ -11,7 +11,17 @@ HTTP API handler configuration
 cardno = '1'
 
 # Mic capture line (for amixer)
-mic_cap = "numid=4,iface=MIXER,name='Mic Playback Volume'"
+#mic_cap = "numid=4,iface=MIXER,name='Mic Playback Volume'"  # chinese card
+#mic_cap = "numid=4,iface=MIXER,name='Mic Playback Volume'"  # sennheiser card
+mic_cap = "numid=6,iface=MIXER,name='Capture Volume'"  # thinkpad x201
 
 # Mic playback line (for amixer)
-mic_play = "numid=8,iface=MIXER,name='Mic Capture Volume'"
+#mic_play = "numid=8,iface=MIXER,name='Mic Capture Volume'"  # chinese card
+#mic_play = "numid=12,iface=MIXER,name='Mic Capture Volume'"  # sennheiser card
+mic_play = "numid=6,iface=MIXER,name='Capture Volume'"  # thinkpad x201
+
+# The device we want to use for MIDI. Found using: mido.get_input_names()
+#device_name = 'USB MS1x1 MIDI Interface:USB MS1x1 MIDI Interface MIDI 1 24:0'
+
+import mido
+device_name = mido.get_input_names()[1]
