@@ -14,7 +14,11 @@ tmux send-keys "cd midi-handler && ./midi_handler.py" C-m
 
 # Start the Asterisk log parsing daemon
 tmux splitw -h -p 50
-tmux send-keys "# ssh root@10.20.30.38 'cd dmt/freepbx-glue && tail -f /var/log/asterisk/full | ./freepbx_glue.py'" C-m
+tmux send-keys "ssh root@kunsthalpbx 'killall python3 ; killall tail ; cd dmt/freepbx-glue && tail -f /var/log/asterisk/full | ./freepbx_glue.py'" C-m
+
+# Start Twinkle
+tmux splitw -v -p 50
+tmux send-keys "DISPLAY=:0 twinkle" C-m
 
 # Attach to the session
 tmux attach-session -t dmt
