@@ -49,7 +49,8 @@ the FreePBX box's root user, which setup is explained below.
 
 ### FreePBX box
 
-To be written.
+We use a stock FreePBX install on a RaspberryPi. Based on the phones used, we configure two SIP extensions, one for the phone placed in the installation room and another one for the Josephine's VM. The latter extension must have an immediate redir into VM set up. 
+For testing we can use a software SIP phone (such as CSipSimple) on android. Depending on the testing scenario it might be handy handy to have a separate extension for this one.
 
 
 Acknowledgments
