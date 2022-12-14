@@ -1,7 +1,8 @@
 dmt
 ===
 
-Description to be written.
+A set of tools for operating an IP phone in a multimedia exhibition. Triggered by MIDI events the tools are meant for operating one SW-based IP phone and one standard office IP phone. The setup allows also routing the audio streams between the IP phones and the rest of the exhibition.
+The name is an acronym for Digital Mechanical Turk.
 
 
 Software dependencies
